@@ -1,0 +1,231 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header-container {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #e8e8e8;
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 20px;
+}
+
+#header-logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: auto;
+}
+
+.header-container h1 {
+    margin: 0;
+    color: #101010;
+    font-size: 24px;
+}
+
+.header-container p {
+    color: #666;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #f9f9f9;
+}
+
+#text-grid {
+    user-select: none;
+}
+
+#text-grid, textarea {
+    display: flex;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#ascii-input {
+    height: 8em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the buttons */
+    align-items: center; /* This line is optional, for vertical alignment */
+    margin: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    align: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.color-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    outline: 2px solid #000000;
+}
+
+.button-selected {
+    outline: 4px solid #d10000; /* Darker red border */
+    box-shadow: 0 0 6px rgba(209, 0, 0, 0.6); /* Red shadow for emphasis */
+    /* Other styles to indicate selection, e.g., color changes or font weight */
+}
+}
+
+#text-grid {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Non-prefixed, should work in most modern browsers */
+
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: white;
+}
+
+.selected-black {
+    background-color: black;
+}
+
+.applied-black {
+    color: black;
+}
+
+.selected-red {
+    background-color: red;
+}
+
+.applied-red {
+    color: red;
+}
+
+.selected-green {
+    background-color: green;
+}
+
+.applied-green {
+    color: green;
+}
+
+.selected-yellow {
+    background-color: yellow;
+}
+
+.applied-yellow {
+    color: yellow;
+}
+
+.selected-blue {
+    background-color: blue;
+}
+
+.applied-blue {
+    color: blue;
+}
+
+.selected-magenta {
+    background-color: magenta;
+}
+
+.applied-magenta {
+    color: magenta;
+}
+
+.selected-cyan {
+    background-color: cyan;
+}
+
+.applied-cyan {
+    color: cyan;
+}
+
+.selected-white {
+    background-color: white;
+}
+
+.applied-white {
+    color: white;
+}
+
+.grid-cell {
+    border: 1px solid #eee;
+    cursor: pointer;
+    display: inline-block;
+    width: 0.5em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-cell:hover {
+    background-color: #f0f0f0; /* subtle hover effect */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}

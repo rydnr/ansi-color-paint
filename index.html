@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ANSI Color Paint</title>
+        <meta name="description" content="Tool to add ANSI colors to ASCII art">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="favicon.png">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">
+            You are using an <strong>outdated</strong> browser. Please
+            <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+            your experience.
+            </p>
+        <![endif]-->
+        <header>
+            <img id="header-logo" src="logo.png" alt="logo"/>
+            <div class="header-container">
+                <h1>ANSI Color Text Formatter</h1>
+                <p>This tool allows you to select text in a grid, choose an ANSI color, and generate text with the correct escape sequences applied. Ideal for creating colorful ASCII art and formatted text outputs.</p>
+                <p>To generate ASCII art from text, take a look at <a href="https://patorjk.com/">Parorjk</a>'s <a href="https://patorjk.com/software/taag/">Text to ASCII Art Generator</a>.</p>
+            </div>
+        </header>
+        <main>
+            <textarea id="ascii-input">
+___________                        _________                      __  .__    .__
+\__    ___/__.__.______   ____    /   _____/ ____   _____   _____/  |_|  |__ |__| ____    ____
+  |    | <   |  |\____ \_/ __ \   \_____  \ /  _ \ /     \_/ __ \   __\  |  \|  |/    \  / ___\
+  |    |  \___  ||  |_> >  ___/   /        (  <_> )  Y Y  \  ___/|  | |   Y  \  |   |  \/ /_/  >
+  |____|  / ____||   __/ \___  > /_______  /\____/|__|_|  /\___  >__| |___|  /__|___|  /\___  /
+          \/     |__|        \/          \/             \/     \/          \/        \//_____/
+            </textarea>
+            <div class="button-container">
+                <button id="colorize-button">Colorize</button>
+            </div>
+            <div id="text-grid" style="display: none;"><!-- Dynamically filled with text cells --></div>
+            <div class="button-container">
+                <div id="color-picker" style="display: none;">
+                    <button id="button-black" class="color-button" data-color="black" style="background-color: black;"></button>
+                    <button id="button-red" class="color-button" data-color="red" style="background-color: red;"></button>
+                    <button id="button-green" class="color-button" data-color="green" style="background-color: green;"></button>
+                    <button id="button-yellow" class="color-button" data-color="yellow" style="background-color: yellow;"></button>
+                    <button id="button-blue" class="color-button" data-color="blue" style="background-color: blue;"></button>
+                    <button id="button-magenta" class="color-button" data-color="magenta" style="background-color: magenta;"></button>
+                    <button id="button-cyan" class="color-button" data-color="cyan" style="background-color: cyan;"></button>
+                    <button id="button-white" class="color-button" data-color="white" style="background-color: white;"></button>
+                </div>
+            </div>
+            <textarea id="output" style="display:none;"></textarea>
+            <div class="button-container">
+                <button id="copy-button" style="display:none;">Copy to Clipboard</button>
+            </div>
+        </main>
+        <footer>
+            <p>
+                Project on <a href="https://github.com/rydnr/ansi-color-paint" target="_blank">GitHub</a> |
+                Licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPLv3</a> |
+                Created by <a href="https://github.com/rydnr" target="_blank">rydnr</a> for <a href="https://www.acm-sl.com" target="_blank">Automated Computing Machinery, S.L.</a>
+            </p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
