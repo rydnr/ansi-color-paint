@@ -163,7 +163,7 @@ function extractCellColor(cell) {
     return appliedClass.replace('applied-', '');
   }
 
-  return 'default'; // Return a default value if no applied color is found
+  return 'default';
 }
 
 function generateANSIText() {
@@ -184,6 +184,8 @@ function generateANSIText() {
         let value = cell.textContent;
         if ((value == '') || (value == '&nbsp;')) {
           value = ' ';
+        } else if (value == '\\') {
+          value = '\\\\';
         }
         const cellText = value;
 
